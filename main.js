@@ -21,7 +21,7 @@ rollingSpider.connect(function () {
       {
         delay: 3000,
         task: function () {
-          rollingSpider.forward();
+          rollingSpider.frontFlip();
         }
       },
       {
