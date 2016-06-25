@@ -2,7 +2,7 @@
 
 var RollingSpider = require('rolling-spider');
 var temporal = require('temporal');
-var rollingSpider = new RollingSpider();
+var rollingSpider = new RollingSpider({logger: console.log});
 
 rollingSpider.connect(function () {
   rollingSpider.setup(function () {
@@ -19,7 +19,7 @@ rollingSpider.connect(function () {
         }
       },
       {
-        delay: 3000,
+        delay: 5000,
         task: function () {
           rollingSpider.frontFlip();
         }
